@@ -1,0 +1,297 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Jobs</title>
+    
+    <link rel="stylesheet" href="{% static 'if/css/custom-bs.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'if/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'if/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/quill.snow.css' %}">
+    
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'if/css/style.css' %}">    
+  </head>
+  <body id="top">
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html">INTERNSHIP FAIR</a></div>
+          <nav class="mx-auto site-navigation" >
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0" style="list-style-type: none;">
+              <a href="{% url 'if_home' %}" class="active"><li class="navlink1 list_items">Home</li></a>
+              <a href="index.html#companies" class="active"><li class="list_items">Companies</li></a>
+              <a href="{% url 'job-listings' %}" class="active"><li class="list_items">Job Profiles</li></a>
+              <a href="index.html#schedule" class="active"><li class="list_items">Schedule</li></a>
+            </ul>
+          </nav>
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto"></div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('https://www.elsetge.cat/myimg/f/155-1557969_office-desk-wallpaper-empty-perfect-office-desk-wallpaper.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white site-logo">LIST OF COMPANIES</h1>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section" id="next" style="background: #f8f9fa !important;">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2">Jobs Offered</h2>
+          </div>
+        </div>
+        
+        <!-- <ul class="job-listings mb-5 align-items-center text-center">
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center" style="cursor: pointer;">
+            <a class="job_single" href="job-single.html"></a>
+            <div class="job-listing-logo" >
+              <img style="width: 170px;"src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRDPRw6YeKWJpC0fJzC8xrb5OBTGR1UoD9zfXwF8hrANGvCWvSY" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4" style="margin-left:0px !important;">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>Software Engineer</h2>
+                <strong>Google</strong>
+              </div>
+              <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                <span class="icon-room"></span> New York
+              </div>
+                <div class="job-listing-meta">
+                  <span style="font-size: 20px;background: #8a57db;" class="badge badge-success">Read More...</span>
+                </div>
+            </div>
+          </li>
+        </ul> -->
+
+        {% for comp in company_data %}
+        <ul class="job-listings mb-5 align-items-center text-center">
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center" style="cursor: pointer;">
+            <a class="job_single" href="job-single/{{comp.Company_name}}"></a>
+            <div class="job-listing-logo" >
+              <img style="width: 170px;"src="{% static '{{comp.logo}}' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4" style="margin-left:0px !important;">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>{{comp.role}}</h2>
+                <strong>{{comp.Company_name}}</strong>
+              </div>
+              <div class="job-listing-location mb-3 mb-sm-0 custom-width w-25">
+                <span class="icon-room"></span> {{comp.loctaion}}
+              </div>
+                <div class="job-listing-meta">
+                  <span style="font-size: 20px;background: #8a57db;" class="badge badge-success">Read More...</span>
+                </div>
+            </div>
+          </li>
+        </ul>
+        {% endfor %}
+
+                  <!-- {% if company_data.has_other_pages %}
+            <ul class="pagination">
+              {% if company_data.has_previous %}
+                <li><a href="?page={{ company_data.previous_page_number }}">&laquo;</a></li>
+              {% else %}
+                <li class="disabled"><span>&laquo;</span></li>
+              {% endif %}
+              {% for i in company_data.paginator.page_range %}
+                {% if company_data.number == i %}
+                  <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+                {% else %}
+                  <li><a href="?page={{ i }}">{{ i }}</a></li>
+                {% endif %}
+              {% endfor %}
+              {% if company_data.has_next %}
+                <li><a href="?page={{ company_data.next_page_number }}">&raquo;</a></li>
+              {% else %}
+                <li class="disabled"><span>&raquo;</span></li>
+              {% endif %}
+            </ul>
+          {% endif %} -->
+            
+
+        <div class="row pagination-wrap">
+          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+            <span>Showing 1-5 Of 30 Jobs</span>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+            <div class="custom-pagination ml-auto">
+              {% if company_data.has_previous %}
+                    <a href="?page={{ company_data.previous_page_number }}" class="prev">Prev</a>
+              {% else %} 
+                    <a class="prev disabled">Prev</a>  
+              {% endif %}
+                
+              {% for i in company_data.paginator.page_range %}
+              <div class="d-inline-block">               
+                {% if company_data.number == i %}
+                    <a href="?page={{ i }}" class="active">{{ i }}</a>
+                 {% else %}   
+                    <a href="?page={{ i }}">{{ i }}</a>
+                {% endif %}
+              {% endfor %}
+              </div>  
+                    {% if company_data.has_next %}  
+                   
+                    <a href="?page={{ company_data.next_page_number }}" class="next">Next</a>
+                    {% else %}
+                    <a class="next disabled">Next</a>
+                    {% endif %}
+                
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    
+    <footer class="site-footer" style="background: black;" id="footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class=" col-sm-12 col-md-3 mb-4 mb-md-0 text-center">
+            
+            <div class="footerLogo">
+              <a class="" >
+                  <img class="styleFootLogo" src="{% static 'if/images/acm-logo.png' %}"/>
+              </a> 
+          </div>
+      
+          <div>
+              Don't let us convince you about our success. Let our three consecutive Best Student Chapter of the Year awards do the talking.
+          </div>
+          </div>
+          <div class=" col-sm-12 col-md-3 mb-4 mb-md-0 text-center">
+            <h3>Location</h3>
+            <div>
+                            <ul style="list-style-type:none;padding:0 ">
+                                <li class="widget_anpstext">
+                                    
+                                    No.U-15,
+                                    J.V.P.D. Scheme,
+                                    Bhaktivedanta Swami Marg,
+                                    Opp.Cooper Hospital
+                                    Vile Parle (West),
+                                    
+                                    Mumbai-400 056.
+                                    India
+                                </li>
+                            
+                               
+                                <li class="widget_anpstext">
+                                    coreacm@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+          </div>
+          <div class=" col-6 col-md-3 mb-4 mb-md-0 text-center">
+            <h3>Navigation</h3>
+            <ul class="list-unstyled">
+              <li><a href="index.html#about" class="footerLink">About</a></li>
+              <li><a href="index.html#schedule" class="footerLink">Schedule</a></li>
+              <li><a href="#" class="footerLink">Profiles</a></li>
+              <li><a href="index.html#testimonial" class="footerLink">Testimonials</a></li>
+              <li><a href="index.html#companies" class="footerLink">Companies</a></li>
+            </ul>
+          </div>
+          
+          <div class=" col-6 col-md-3 mb-4 mb-md-0 text-center" >
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/djscoe.acm.5"><span class="icon-facebook"></span></a>
+              
+              <a href="https://www.instagram.com/djsanghvi_acm/?hl=en"><span class="icon-instagram"></span></a>
+              <a href="https://www.linkedin.com/company/dj-sanghvi-acm/"><span class="icon-linkedin"></span></a>
+            </div>
+            <div class=" text-center">
+              <div class="branchHead">Ankit Gupta</div>
+              <div class="branchInfo">
+                 
+                  <span class="branchNumber">+91-98334-82539</span>
+              </div>
+          </div>
+          <div class=" text-center">
+              <div class="branchHead">Heeket Mehta</div>
+              <div class="branchInfo">
+                 
+                  <span class="branchNumber">+91-99674-92421</span>
+              </div>
+          </div>
+          </div>
+        </div>
+
+       
+      </div>
+      <div class="container">
+        <iframe class="map" style="box-shadow: 2px 2px 2px 1px rgba(128,128,128,0.1);" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942.4994801090171!2d72.83743607483443!3d19.107747162267845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75f29a4205098f99!2sDwarkadas+J+Sanghvi+College+of+Engineering!5e0!3m2!1sen!2sus!4v1397913464271" frameborder="0" style="border:0"></iframe>
+        <div class="row text-center" style="margin-top: 30px;">
+          <div class="col-12">
+            <p class="copyright"><small>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="#footer" class="footerLink" >Infotech Team</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'if/js/jquery.min.js' %}"></script>
+    <script src="{% static 'if/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'if/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'if/js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'if/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'if/js/jquery.easing.1.3.js' %}"></script>
+    
+    <script src="{% static 'if/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'if/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'if/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'if/js/quill.min.js' %}"></script>
+    
+    
+    <script src="{% static 'if/js/bootstrap-select.min.js' %}"></script>
+    
+    <script src="{% static 'if/js/custom.js' %}"></script>
+   
+     
+  </body>
+</html>

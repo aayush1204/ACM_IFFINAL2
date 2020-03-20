@@ -1,0 +1,453 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free-Template.co" />
+    <link rel="shortcut icon" href="ftco-32x32.png">
+    
+    <link rel="stylesheet" href="{% static 'if/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'if/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'if/css/animate.min.css' %}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'if/css/style.css' %}">    
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <img src="{% static 'if/images/loader.gif' %}" style="height: 100%;width: 100%;">
+    <!-- <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div> -->
+  </div>
+    
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+    
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html">Interns</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0" style="list-style-type: none;">
+              <a href="{% url 'if_home' %}" class="active"><li class="navlink1 list_items">Home</li></a>
+              <a href="#companies" class="active"><li class="list_items">Companies</li></a>
+              <a href="{% url 'job-listings' %}" class="active"><li class="list_items">Job Profiles</li></a>
+              <a href="#schedule" class="active"><li class="list_items">Schedule</li></a>
+             
+            </ul>
+          </nav>
+          
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            
+            <a href="#" class="ml-auto site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section  class="home-section section-hero overlay bg-image" style="background-image: url({% static 'if/images/back2.gif' %})" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+                
+              <h1 class="text-white font-weight-bold">Internship Fair 2020</h1>
+              <br>
+              <h2 class="text-white ">"The expert in anything was once a beginner"</h2>
+              <p>DJSCE ACM warmly welcomes you to its Flagship Event IF2020.</p>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      
+
+    </section>
+    
+    <section class="site-section " id="about">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+              
+               
+                <img src="{% static 'if/images/ijfcover.png' %}" alt="Image" class="img-fluid ">
+            
+            </div>
+            <div class="col-lg-5 ml-auto">
+              <h2 class="section-title mb-3">ABOUT JOB FAIR</h2>
+              <p class="lead">Finding the right talent as well as finding the best Internship or Job profile is difficult and tedious for both companies and applicants. Internship and Job Fair (IJF) brings a very innovative solution to this problem. It provides a platform for companies to hire India’s best talent for different profiles as well as a platform for students to get an internship or a placement in these companies.</p>
+                
+              <!-- <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p> -->
+            </div>
+            
+          </div>
+          <div class="alignButton">
+            <a href="{% url 'job-listings' %}" ><button class="styleButton" >View JOB Profiles</button></a>
+          </div>
+           
+        </div>
+      </section>
+
+    
+
+    <section class="site-section" style="background:#f8f9fa;" id="schedule">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2">SCHEDULE</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="row main-timeline">
+                    <div class="col-md-3 col-sm-4">
+                      <div class="timeline blue">
+                          <a  class="timeline-content">
+                              <div class="timeline-year">
+                                  <span>18th March</span>
+                              </div>
+                              <div class="inner-content">
+                                  <div class="timeline-icon">
+                                      <i class="fa fa-users"></i>
+                                  </div>
+                                  <h3 class="title">Companies <br> List out</h3>
+                                  
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+                      <div  class="col-md-3 col-sm-4">
+                          <div class="timeline blue">
+                              <a  class="timeline-content">
+                                  <div class="timeline-year">
+                                      <span>20th March</span>
+                                  </div>
+                                  <div class="inner-content">
+                                      <div class="timeline-icon">
+                                          <i class="fa fa-globe"></i>
+                                      </div>
+                                      <h3 class="title">Registration<br> Starts</h3>
+                                      
+                                  </div>
+                              </a>
+                          </div>
+                      </div>
+                       
+                      <div class="col-md-3 col-sm-4">
+                        <div class="timeline blue">
+                            <a  class="timeline-content">
+                                <div class="timeline-year">
+                                    <span>23rd March</span>
+                                </div>
+                                <div class="inner-content">
+                                    <div class="timeline-icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <h3 class="title">Registration <br>Ends</h3>
+                                    
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                      <div class="timeline blue">
+                          <a  class="timeline-content">
+                              <div class="timeline-year">
+                                  <span>24th March</span>
+                              </div>
+                              <div class="inner-content">
+                                  <div class="timeline-icon">
+                                      <i class="fa fa-users"></i>
+                                  </div>
+                                  <h3 class="title">Interview <br>Day</h3>
+                                 
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+        
+
+        
+
+      </div>
+    </section>
+
+    
+
+    
+    <section class="site-section py-4" id="companies">
+      <div class="container">
+  
+        <div class="row align-items-center">
+          <div class="col-12 text-center mt-4 mb-5">
+            <div class="row justify-content-center">
+              <div class="col-md-7">
+                <h2 class="section-title mb-2">OFFERING COMPANIES</h2>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- {% for comp in company_data %}
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <div class="outerBox">
+              <div class="sponsors">
+                  <img src="{% static '{{comp.logo}}' %}" alt="Image" class="img-fluid imgEdit ">
+              </div>
+            </div>
+
+          {% endfor %} -->
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+              <div class="outerBox">
+                <div class="sponsors">
+                    <img src="{% static 'if/images/lg.jpg' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+           
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+              <div class="outerBox">
+                <div class="sponsors">
+                   <img src="{% static 'if/images/logo_apple.svg' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+              <div class="outerBox">
+                <div class="sponsors">
+                   <img src="{% static 'if/images/machani.png' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <div class="outerBox">
+                <div class="sponsors">
+                   <img src="{% static 'if/images/matdun.jpg' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+            
+          </div>
+
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <div class="outerBox">
+                <div class="sponsors">
+                   <img src="{% static 'if/images/logo_paypal.svg' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <div class="outerBox">
+                <div class="sponsors">
+                   <img src="{% static 'if/images/prayogic.png' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+            
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <div class="outerBox">
+                <div class="sponsors">
+                    <img src="{% static 'if/images/reachivy.png' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+           
+          </div>
+          <div class="col-6 col-lg-3 col-md-6 text-center">
+            <div class="outerBox">
+                <div class="sponsors">
+                   <img src="{% static 'if/images/logo_airbnb.svg' %}" alt="Image" class="img-fluid imgEdit ">
+                </div>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="bg-light pt-5 testimony-full" id="testimonial">
+        <h2 class="section-title mb-5 text-center">EXPERIENCES</h2>
+        <div class="owl-carousel single-carousel">
+
+        
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>&ldquo;Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.&rdquo;</p>
+                  <p><cite> &mdash; Corey Woods, SE Comps</cite></p>
+                </blockquote>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 align-self-center text-center text-lg-left">
+                <blockquote>
+                  <p>&ldquo;Soluta quasi cum delectus eum facilis recusandae nesciunt molestias accusantium libero dolores repellat id in dolorem laborum ad modi qui at quas dolorum voluptatem voluptatum repudiandae.&rdquo;</p>
+                  <p><cite> &mdash; Chris Peters, TE IT</cite></p>
+                </blockquote>
+              </div>
+              
+            </div>
+          </div>
+
+      </div>
+
+    </section>
+
+    
+    
+    <footer class="site-footer" style="background: black;" id="footer">
+
+      <a href="#top" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+          <div class=" col-sm-12 col-md-3 mb-4 mb-md-0 text-center">
+            
+            <div class="footerLogo">
+              <a class="" >
+                  <img class="styleFootLogo" src="{% static 'if/images/acm-logo.png' %}"/>
+              </a> 
+          </div>
+      
+          <div>
+              Don't let us convince you about our success. Let our three consecutive Best Student Chapter of the Year awards do the talking.
+          </div>
+          </div>
+          <div class=" col-sm-12 col-md-3 mb-4 mb-md-0 text-center">
+            <h3>Location</h3>
+            <div>
+                            <ul style="list-style-type:none;padding:0 ">
+                                <li class="widget_anpstext">
+                                    
+                                    No.U-15,
+                                    J.V.P.D. Scheme,
+                                    Bhaktivedanta Swami Marg,
+                                    Opp.Cooper Hospital
+                                    Vile Parle (West),
+                                    
+                                    Mumbai-400 056.
+                                    India
+                                </li>
+                            
+                               
+                                <li class="widget_anpstext">
+                                    coreacm@gmail.com
+                                </li>
+                            </ul>
+                        </div>
+          </div>
+          <div class=" col-6 col-md-3 mb-4 mb-md-0 text-center">
+            <h3>Navigation</h3>
+            <ul class="list-unstyled">
+              <li><a href="#about" class="footerLink">About</a></li>
+              <li><a href="#schedule" class="footerLink">Schedule</a></li>
+              <li><a href="job-listings.html" class="footerLink">Profiles</a></li>
+              <li><a href="#testimonial" class="footerLink">Testimonials</a></li>
+              <li><a href="#companies" class="footerLink">Companies</a></li>
+            </ul>
+          </div>
+          
+          <div class=" col-6 col-md-3 mb-4 mb-md-0 text-center" >
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/djscoe.acm.5"><span class="icon-facebook"></span></a>
+              
+              <a href="https://www.instagram.com/djsanghvi_acm/?hl=en"><span class="icon-instagram"></span></a>
+              <a href="https://www.linkedin.com/company/dj-sanghvi-acm/"><span class="icon-linkedin"></span></a>
+            </div>
+            <div class=" text-center">
+              <div class="branchHead">Ankit Gupta</div>
+              <div class="branchInfo">
+                 
+                  <span class="branchNumber">+91-98334-82539</span>
+              </div>
+          </div>
+          <div class=" text-center">
+              <div class="branchHead">Heeket Mehta</div>
+              <div class="branchInfo">
+                 
+                  <span class="branchNumber">+91-99674-92421</span>
+              </div>
+          </div>
+          </div>
+        </div>
+
+       
+      </div>
+      <div class="container">
+        <iframe class="map" style="box-shadow: 2px 2px 2px 1px rgba(128,128,128,0.1);" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d942.4994801090171!2d72.83743607483443!3d19.107747162267845!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x75f29a4205098f99!2sDwarkadas+J+Sanghvi+College+of+Engineering!5e0!3m2!1sen!2sus!4v1397913464271" frameborder="0" style="border:0"></iframe>
+        <div class="row text-center" style="margin-top: 30px;">
+          <div class="col-12">
+            <p class="copyright"><small>
+              <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="#footer" class="footerLink" >Infotech Team</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'if/js/jquery.min.js' %}"></script>
+    <script src="{% static 'if/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'if/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'if/js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'if/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'if/js/jquery.easing.1.3.js' %}"></script>
+    
+    <script src="{% static 'if/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'if/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'if/js/owl.carousel.min.js' %}"></script>
+    
+    <script src="{% static 'if/js/bootstrap-select.min.js' %}"></script>
+    
+    <script src="{% static 'if/js/custom.js' %}"></script>
+    
+     
+  </body>
+</html>
